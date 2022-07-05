@@ -645,6 +645,7 @@ section#events .pic img {
 
 @media screen and (min-width: 888px) {
   .hero-img {
+    background: url(../images/slider.JPG)
     right: 0;
     width: 50%;
     left: unset;
