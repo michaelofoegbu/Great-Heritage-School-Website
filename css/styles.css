@@ -30,45 +30,6 @@ a {
           animation: introLoad 3s forwards;
 }
 
-nav {
-  position: fixed;
-  right: 0;
-  top: 0;
-  background-color: white;
-  height: 100vh;
-  width: 50%;
-  z-index: 999;
-  text-transform: uppercase;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-  transition: -webkit-transform .5s ease-in-out;
-  transition: transform .5s ease-in-out;
-  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 7em;
-}
-
-nav ul a {
-  color: black;
-  padding: .75em 2em;
-  display: block;
-}
-
-nav ul a:hover {
-  background-color: grey;
-}
-
-nav .close {
-  float: right;
-  margin: 2em;
-  width: 2.5em;
-}
-
 nav.menu-btn {
   -webkit-transform: translatex(0);
           transform: translatex(0);
@@ -88,6 +49,45 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+header nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: white;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  text-transform: uppercase;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 7em;
+}
+
+header nav ul a {
+  color: black;
+  padding: .75em 2em;
+  display: block;
+}
+
+header nav ul a:hover {
+  background-color: grey;
+}
+
+header nav .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
 }
 
 header svg {
@@ -124,16 +124,18 @@ section.hero .cont {
   border-radius: 30px;
 }
 
-section.hero h1 {
+section.hero .cont h1 {
   font-size: 2.3rem;
   margin-top: 3em;
   line-height: 3.3rem;
   color: white;
+  padding: 10px;
 }
 
-section.hero .subhead {
+section.hero .cont .subhead {
   font-size: 1.4rem;
   color: white;
+  padding: 10px;
 }
 
 section.hero .down-arrow {
@@ -150,7 +152,7 @@ section.hero .down-arrow path {
 
 section.history {
   margin: 0;
-  background-color: #007af3;
+  background-color: white;
   padding: 10px;
 }
 
@@ -160,7 +162,7 @@ section.history div {
 
 section.history div h1 {
   text-align: center;
-  color: white;
+  color: #014184;
 }
 
 section#principal {
@@ -597,8 +599,8 @@ section#events .pic img {
 
 @-webkit-keyframes moveArrow {
   from {
-    -webkit-transform: translateY(-23px);
-            transform: translateY(-23px);
+    -webkit-transform: translateY(-19px);
+            transform: translateY(-19px);
   }
   to {
     -webkit-transform: translateY(0);
@@ -608,8 +610,8 @@ section#events .pic img {
 
 @keyframes moveArrow {
   from {
-    -webkit-transform: translateY(-23px);
-            transform: translateY(-23px);
+    -webkit-transform: translateY(-19px);
+            transform: translateY(-19px);
   }
   to {
     -webkit-transform: translateY(0);
@@ -638,6 +640,81 @@ section#events .pic img {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 888px) {
+  .hero-img {
+    right: 0;
+    width: 50%;
+    left: unset;
+  }
+  .menu {
+    display: none;
+  }
+  header {
+    height: 12vh;
+  }
+  header div img {
+    height: 7vh;
+    width: 5vw;
+    position: relative;
+    top: 1em;
+  }
+  header div .logo {
+    font-size: 1.4rem;
+    position: relative;
+    bottom: 1px;
+  }
+  header nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  header nav ul li a {
+    padding: .5em;
+    font-size: 1em;
+    line-height: 2em;
+    position: relative;
+    top: .7em;
+  }
+  header nav ul li a:hover {
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 1px;
+  }
+  header svg {
+    display: none;
+  }
+  section.hero .cont {
+    background-color: unset;
+    width: 50%;
+    text-align: center;
+  }
+  section.hero .cont h1 {
+    color: black;
+  }
+  section.hero .cont .subhead {
+    color: black;
+  }
+  section.hero .down-arrow {
+    stroke: black;
+  }
+  section.hero .down-arrow path {
+    fill: black;
   }
 }
 /*# sourceMappingURL=styles.css.map */
