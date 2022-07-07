@@ -136,13 +136,15 @@ section.history{
 }
 section#principal{
     color: white;
+    margin-top: 4.5em;
     .prin{
-        background-color: #20272E;
+        background-color: rgba(27, 25, 25, 0.5);
         border-radius: 2em;
         width: 80%;
         height: auto;
         text-align: center;
-        margin: 3.5em auto 2em auto;
+        margin: auto;
+        // margin: 3.5em auto 2em auto;
         padding: 2em 1em;
     }
     img{
@@ -154,7 +156,7 @@ section#principal{
 section#miss{
     background-color: rgba(27, 25, 25, 0.3);
     margin: 0;
-    .part{
+    .part-first{
         margin: 2em;
         padding: 5px;
         color: #f2f2f2;
@@ -164,10 +166,56 @@ section#miss{
             text-align: center;
             font-size: 1.8em;
         }
-
     }
+
+    .part-second{
+        margin: 2em;
+        padding: 5px;
+        color: #f2f2f2;
+
+        h1{
+            color: #20272E;
+            text-align: center;
+            font-size: 1.8em;
+        }
+    }
+
+
 }
 section#curriculum{
+    .part-down{
+        margin: 2em;
+        padding: 5px;
+        color: #f2f2f2;
+
+        h1{
+            color: white;
+            text-align: center;
+            font-size: 1.8em;
+        }
+        ul{
+            padding-left: .4em;
+            li{
+                position: relative;
+                margin-left: 2em;
+                margin-bottom: 1em;
+                font-size: 1.5em;
+                &:before{
+                    content: '';
+                    height: 20px;
+                    left: -1.3em;
+                    bottom: .2em;
+                    background-image: url('../images/bullet.svg');
+                    position: absolute;
+                    width: 20px;
+                    background-size: contain;
+                    margin-right: .5em;
+                    
+                }
+            }
+        }
+    }
+
     background-color: #20272E;
     color: white;
     margin-top: -32px;
@@ -508,9 +556,11 @@ section#events{
 }
 
 @media screen and (min-width:888px) {
+
     .hero-img{
         right: 0;
         width: 50%;
+        height: 42em;
         left: unset;
     }
     .menu{
@@ -519,6 +569,8 @@ section#events{
 
     header{
         height: 12vh;
+        background: none;
+        position: unset;
         // padding: 5px;
         div{
             
@@ -547,7 +599,12 @@ section#events{
                 display: flex;
                 margin: 0;
                 padding: 0;
+                background-color: rgb(224, 207, 175);
+                padding: 0 5px 19px 5px;
+                border-radius: 5px;
                 li{
+                    
+                    
                     a{
                         padding: .5em;
                         font-size: 1em;
@@ -573,6 +630,7 @@ section#events{
     }
 
     section.hero{
+        height: 32em;
         .cont{
             background-color: unset;
             width: 50%;
@@ -592,6 +650,109 @@ section#events{
             }
             
         }
+    }
+    .middle{
+        display: flex;
+        .history{
+            width: 50%;
+            background: none;
+            border-right: 1px solid black;
+            div{
+                width: 80%;
+                margin: auto;
+                
+                // background-color: #20272E;
+                h1{
+                    font-size: 3em;
+                }
+                p{
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        #principal{
+            color: black;
+            width: 50%;
+            .prin{
+                font-size: 1.2em;
+                background: none;
+                margin: auto;
+                h1{
+                    color: #014184;
+                }
+            }
+        }
+
+
+    }
+
+    section#miss{
+        display: flex;
+        .part-first{
+            width: 50%;
+            margin: 3em;
+            hr{
+               margin-bottom: 40px;
+            }
+            font-size: 1.1em;
+            h1{
+                font-size: 2.5em;
+            }
+        }
+        .part-second{
+            width: 50%;
+            margin: 3em;
+            hr{
+                margin-bottom: 40px;
+             }
+            font-size: 1.1em;
+            h1{
+                font-size: 2.5em;
+            }
+        }
+    }
+    section#curriculum{
+        display: flex;
+        .part-down{
+            width: 50%;
+            h1{
+                font-size: 3em;
+                margin-top: 1.13em;
+            }
+            margin: 20px;
+            ul{
+                padding-left: .4em;
+                li{
+                    position: relative;
+                    margin-left: 2em;
+                    margin-bottom: 1em;
+                    font-size: 1.5em;
+                    &:before{
+                        content: '';
+                        height: 20px;
+                        left: -1em;
+                        background-image: url('../images/bullet.svg');
+                        position: absolute;
+                        width: 20px;
+                        background-size: contain;
+                        margin-right: .5em;
+                        
+                    }
+                }
+            }
+        }
+        div{
+            width: 50%;
+            h1{
+                font-size: 3em;
+            }
+
+        }
+    }
+    #facility{
+        margin: 2em;
+        background: none;
     }
 }
 

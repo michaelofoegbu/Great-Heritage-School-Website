@@ -167,15 +167,16 @@ section.history div h1 {
 
 section#principal {
   color: white;
+  margin-top: 4.5em;
 }
 
 section#principal .prin {
-  background-color: #20272E;
+  background-color: rgba(27, 25, 25, 0.5);
   border-radius: 2em;
   width: 80%;
   height: auto;
   text-align: center;
-  margin: 3.5em auto 2em auto;
+  margin: auto;
   padding: 2em 1em;
 }
 
@@ -190,13 +191,25 @@ section#miss {
   margin: 0;
 }
 
-section#miss .part {
+section#miss .part-first {
   margin: 2em;
   padding: 5px;
   color: #f2f2f2;
 }
 
-section#miss .part h1 {
+section#miss .part-first h1 {
+  color: #20272E;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+section#miss .part-second {
+  margin: 2em;
+  padding: 5px;
+  color: #f2f2f2;
+}
+
+section#miss .part-second h1 {
   color: #20272E;
   text-align: center;
   font-size: 1.8em;
@@ -206,6 +219,41 @@ section#curriculum {
   background-color: #20272E;
   color: white;
   margin-top: -32px;
+}
+
+section#curriculum .part-down {
+  margin: 2em;
+  padding: 5px;
+  color: #f2f2f2;
+}
+
+section#curriculum .part-down h1 {
+  color: white;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+section#curriculum .part-down ul {
+  padding-left: .4em;
+}
+
+section#curriculum .part-down ul li {
+  position: relative;
+  margin-left: 2em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+section#curriculum .part-down ul li:before {
+  content: '';
+  height: 20px;
+  left: -1.3em;
+  bottom: .2em;
+  background-image: url("../images/bullet.svg");
+  position: absolute;
+  width: 20px;
+  background-size: contain;
+  margin-right: .5em;
 }
 
 section#curriculum h1 {
@@ -645,9 +693,9 @@ section#events .pic img {
 
 @media screen and (min-width: 888px) {
   .hero-img {
-    background: url(../images/slider.JPG)
     right: 0;
     width: 50%;
+    height: 42em;
     left: unset;
   }
   .menu {
@@ -655,6 +703,8 @@ section#events .pic img {
   }
   header {
     height: 12vh;
+    background: none;
+    position: unset;
   }
   header div img {
     height: 7vh;
@@ -682,6 +732,9 @@ section#events .pic img {
     display: flex;
     margin: 0;
     padding: 0;
+    background-color: #e0cfaf;
+    padding: 0 5px 19px 5px;
+    border-radius: 5px;
   }
   header nav ul li a {
     padding: .5em;
@@ -700,6 +753,9 @@ section#events .pic img {
   header svg {
     display: none;
   }
+  section.hero {
+    height: 32em;
+  }
   section.hero .cont {
     background-color: unset;
     width: 50%;
@@ -716,6 +772,107 @@ section#events .pic img {
   }
   section.hero .down-arrow path {
     fill: black;
+  }
+  .middle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .middle .history {
+    width: 50%;
+    background: none;
+    border-right: 1px solid black;
+  }
+  .middle .history div {
+    width: 80%;
+    margin: auto;
+  }
+  .middle .history div h1 {
+    font-size: 3em;
+  }
+  .middle .history div p {
+    font-size: 1.2em;
+  }
+  .middle #principal {
+    color: black;
+    width: 50%;
+  }
+  .middle #principal .prin {
+    font-size: 1.2em;
+    background: none;
+    margin: auto;
+  }
+  .middle #principal .prin h1 {
+    color: #014184;
+  }
+  section#miss {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section#miss .part-first {
+    width: 50%;
+    margin: 3em;
+    font-size: 1.1em;
+  }
+  section#miss .part-first hr {
+    margin-bottom: 40px;
+  }
+  section#miss .part-first h1 {
+    font-size: 2.5em;
+  }
+  section#miss .part-second {
+    width: 50%;
+    margin: 3em;
+    font-size: 1.1em;
+  }
+  section#miss .part-second hr {
+    margin-bottom: 40px;
+  }
+  section#miss .part-second h1 {
+    font-size: 2.5em;
+  }
+  section#curriculum {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section#curriculum .part-down {
+    width: 50%;
+    margin: 20px;
+  }
+  section#curriculum .part-down h1 {
+    font-size: 3em;
+    margin-top: 1.13em;
+  }
+  section#curriculum .part-down ul {
+    padding-left: .4em;
+  }
+  section#curriculum .part-down ul li {
+    position: relative;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+  }
+  section#curriculum .part-down ul li:before {
+    content: '';
+    height: 20px;
+    left: -1em;
+    background-image: url("../images/bullet.svg");
+    position: absolute;
+    width: 20px;
+    background-size: contain;
+    margin-right: .5em;
+  }
+  section#curriculum div {
+    width: 50%;
+  }
+  section#curriculum div h1 {
+    font-size: 3em;
+  }
+  #facility {
+    margin: 2em;
+    background: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */
