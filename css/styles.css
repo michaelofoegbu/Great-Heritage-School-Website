@@ -294,8 +294,7 @@ section#curriculum div ul li:before {
 }
 
 section#facility {
-  background-color: rgba(27, 25, 25, 0.3);
-  margin-top: -20px;
+  background: none;
 }
 
 section#facility h1 {
@@ -385,7 +384,7 @@ section#facility #slider figure img {
 }
 
 section#events {
-  background-color: rgba(27, 25, 25, 0.3);
+  background: none;
   padding: 10px;
   height: auto;
 }
@@ -873,6 +872,13 @@ section#events .pic img {
   #facility {
     margin: 2em;
     background: none;
+    font-size: 1.8em;
+  }
+  #facility h1 {
+    font-size: 3em;
+  }
+  #events {
+    font-size: 1.8em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
